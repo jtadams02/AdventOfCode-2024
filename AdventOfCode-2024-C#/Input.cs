@@ -33,5 +33,26 @@ namespace AdventOfCode_2024_C_
             sr.Close();
             return numbers;
         }
+        public List<List<int>> GetDay2()
+        {
+            List<List<int>> numbers = new List<List<int>>();
+            string line;
+            StreamReader sr = new StreamReader((_directory + _path));
+            line = sr.ReadLine();
+            while (line != null)
+            {
+                string[] splitted = line.Split(null);
+                List<int> currentLine = new List<int>();
+
+                foreach (string x in splitted)
+                {
+                    currentLine.Add(int.Parse(x));
+                }
+                numbers.Add(currentLine);
+                line = sr.ReadLine();
+            }
+            sr.Close();
+            return numbers;
+        }
     }
 }

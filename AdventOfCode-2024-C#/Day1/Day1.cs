@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode_2024_C_.Day1
 {
-    class D1P1
+    class Day1
     {
         List<List<int>> _input;
 
-        public D1P1(List<List<int>> input) => _input = input;
+        public Day1(List<List<int>> input) => _input = input;
 
         public int SolvePartOne() 
         {
