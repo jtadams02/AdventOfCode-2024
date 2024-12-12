@@ -85,5 +85,31 @@ namespace AdventOfCode_2024_C_
             }
             return wordSearch;
         }
+
+        public List<List<string>> GetDay5()
+        {
+            string line;
+            List<List<string>> parts = new List<List<string>>();
+
+            StreamReader sr = new StreamReader((_directory + _path));
+            line = sr.ReadLine();
+
+            // line != null may cause problems idk....
+            List<string> partOne = new List<string>();
+            List<string> partTwo = new List<string>();
+
+            while(!String.IsNullOrEmpty(line))
+            {
+                partOne.Add(line);
+                line = sr.ReadLine();
+            }
+            line = sr.ReadLine();
+            while (line != null) { partTwo.Add(line); line = sr.ReadLine(); }
+
+            parts.Add(partOne);
+            parts.Add(partTwo);
+
+            return parts;
+        }
     }
 }
