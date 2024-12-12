@@ -54,5 +54,20 @@ namespace AdventOfCode_2024_C_
             sr.Close();
             return numbers;
         }
+
+        public string GetDay3()
+        {
+            string line;
+            string output = String.Empty;
+
+            StreamReader sr = new StreamReader((_directory + _path));
+            line = sr.ReadLine(); // Should only be one?
+            while (line != null)
+            {
+                output += line;
+                line = sr.ReadLine();
+            }
+            return output;
+        }
     }
 }
