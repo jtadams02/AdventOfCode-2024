@@ -69,5 +69,21 @@ namespace AdventOfCode_2024_C_
             }
             return output;
         }
+
+        public List<string> GetDay4()
+        {
+            string line;
+            List<string> wordSearch = new List<string>();
+            
+            StreamReader sr = new StreamReader((_directory + _path));
+            line = sr.ReadLine();
+
+            while (line != null)
+            {
+                wordSearch.Add(line);
+                line = sr.ReadLine();
+            }
+            return wordSearch;
+        }
     }
 }
